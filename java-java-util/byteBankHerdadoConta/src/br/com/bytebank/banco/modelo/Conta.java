@@ -93,5 +93,16 @@ public abstract class Conta {
     public static int getTotal(){
         return Conta.total;
     }
+    
+    @Override
+    public boolean equals(Object referencia) {
+    	Conta outra = (Conta) referencia;
+    	
+    	if(this.agencia != outra.agencia && this.numero != outra.numero) {
+    		return false;
+    	} else {
+    		return true;
+    	}
+    }
 
 }
